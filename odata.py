@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 import mysql.connector
-import streamlit as st
 
 app = Flask(__name__)
 
@@ -65,7 +64,3 @@ def metadata():
 @app.route('/')
 def home():
     return "✅ OData Server is running. Try /odata/Accounts or /odata/$metadata"
-
-
-# Important: run Flask inside Jupyter
-app.run(debug=False, port=5000, use_reloader=False)
